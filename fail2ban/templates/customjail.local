@@ -1,0 +1,20 @@
+# Fail2ban jail configuration maintained with Puppet
+
+[DEFAULT]
+
+# Bannin kesto 60min
+bantime		= 3600
+
+# Bannaus kolmen yrityksen jalkeen
+maxretry	= 3
+
+# Yritysten tultava 10min sisalla
+findtime	= 600
+
+# Bannaa botit jotka ettii Wordpressin xmlrpc.php filua
+[nginx-xmlrpc]
+enabled		= true
+port		= http,https
+logpath		=%(nginx_access_log)s
+maxretry	= 1 #Bannataan jo ekalla yrityksella
+bantime		= 7200
