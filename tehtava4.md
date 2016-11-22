@@ -43,8 +43,10 @@ Testauksen vuoksi asennetaan Logwatch ennen moduulin ajamista:
 
 Nähdään, että `/etc/cron.daily/`-hakemisto sisältää `00logwatch`-jobin:
 
-```xubuntu@xubuntu:/etc/cron.daily$ ls
-00logwatch  0anacron  apport  apt-compat  bsdmainutils  dpkg  logrotate  man-db  mlocate  passwd  popularity-contest  update-notifier-common  upstart```
+```
+xubuntu@xubuntu:/etc/cron.daily$ ls
+00logwatch  0anacron  apport  apt-compat  bsdmainutils  dpkg  logrotate  man-db  mlocate  passwd  popularity-contest  update-notifier-common  upstart
+```
 
 Otetaan moduuli käyttöön:
 
@@ -52,5 +54,7 @@ Otetaan moduuli käyttöön:
 
 Todetaan, että `00logwatch`-tiedosto on poistunut:
 
-```xubuntu@xubuntu:/etc/cron.daily$ ls
-0anacron  apport  apt-compat  bsdmainutils  dpkg  logrotate  man-db  mlocate  passwd  popularity-contest  update-notifier-common  upstart```
+```
+xubuntu@xubuntu:/etc/cron.daily$ ls
+0anacron  apport  apt-compat  bsdmainutils  dpkg  logrotate  man-db  mlocate  passwd  popularity-contest  update-notifier-common  upstart
+```
