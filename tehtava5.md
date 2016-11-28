@@ -16,7 +16,7 @@ Sen jälkeen boottasin asennettavan koneen ja nähdäkseni sen fyysisen osoittee
 
 ## DHCP:n conffaus
 
-/etc/dhcp/dhcpd.conf:
+#### /etc/dhcp/dhcpd.conf:
 ```
 ddns-update-style none;
 
@@ -45,12 +45,7 @@ subnet 172.28.0.0 netmask 255.255.0.0 {
 }
 ```
 
-Lisäsin myös käytettävän verkkokortin interfacen eri configgiin viimeiselle riville:
-
-/etc/dhcp/dhcpd.conf
-```
-INTERFACES="eno1"
-```
+Lisäsin myös käytettävän verkkokortin interfacen configgiin (`/etc/dhcp/dhcpd.conf`) viimeiselle riville: `INTERFACES="eno1"`
 
 Konfiguraation muokkauksen jälkeen otetaan muutokset käyttöön käynnistämällä DHCP-palvelin uudelleen: `sudo service isc-dhcp-server restart`.
 
@@ -64,7 +59,7 @@ Komennon suoritettua näin, että kohdekone käynnistyi ja sai määrittämäni 
 
 Ladataan Ubuntu 16.04 Xenial netboot-paketti, puretaan se, ja siirretään `/var/lib/tftpboot/` hakemistoon.
 
-syslinux.cfg Tero Karvisen [mallista](http://terokarvinen.com/2016/aikataulu-palvelinten-hallinta-ict4tn022-1-5-op-uusi-ops-loppusyksy-2016#comment-22004)
+#### syslinux.cfg Tero Karvisen [mallista](http://terokarvinen.com/2016/aikataulu-palvelinten-hallinta-ict4tn022-1-5-op-uusi-ops-loppusyksy-2016#comment-22004)
 ```
 # D-I config version 2.0
 # search path for the c32 support libraries (libcom32, libutil etc.)
@@ -83,7 +78,7 @@ default nicoupxe
 
 Seuraavaksi preseedin määritys:
 
-*Joona Leppälahden [preseed.cfg](https://joonaleppalahti.wordpress.com/2016/11/18/palvelinten-hallinta-harjoitus-8/) muokattuna*
+#### Joona Leppälahden [preseed.cfg](https://joonaleppalahti.wordpress.com/2016/11/18/palvelinten-hallinta-harjoitus-8/) muokattuna
 ```
 d-i passwd/user-fullname string Nico Hagelberg
 d-i passwd/username string nicou
