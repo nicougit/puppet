@@ -12,8 +12,5 @@
 ### Run manifest once to install packages
 `sudo puppet apply -v /etc/puppet/manifests/site.pp`
 
-### Run manifest again to finish configuration
-`sudo puppet apply -v /etc/puppet/manifests/site.pp`
-
 ### Configure MySQL root password and disable anonymous login
 `sudo mysql_secure_install`
