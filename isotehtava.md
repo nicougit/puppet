@@ -9,8 +9,7 @@
 ### Copy modules and manifest to /etc/puppet/
 `sudo cp nginx tomcat8 mariadb /etc/puppet/modules/ && sudo cp site.pp /etc/puppet/manifests/`
 
-### Run manifest once to install packages
+### Run manifest once
 `sudo puppet apply -v /etc/puppet/manifests/site.pp`
 
-### Configure MySQL root password and disable anonymous login
-`sudo mysql_secure_install`
+That's it!

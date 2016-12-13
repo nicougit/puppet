@@ -6,6 +6,7 @@ class tomcat8 {
 	file { '/var/lib/tomcat8/conf/server.xml':
 		content		=> template('tomcat8/server.xml'),
 		notify		=> Service['tomcat8'],
+		require		=> Package['tomcat8'],
 	}
 
 	service { 'tomcat8':

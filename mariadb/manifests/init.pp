@@ -7,5 +7,6 @@ class mariadb {
 		enable => true,
 		ensure => running,
 		provider => "systemd",
+		require => Package["mariadb-server-10.0"],
 	}
 }
