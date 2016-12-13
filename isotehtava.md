@@ -21,7 +21,7 @@ class {alkotool:}
 ```
 
 #### Run the manifest
-`sudo puppet apply -v /etc/puppet/manifests/site.pp` or if you did not create the `site.pp` file you can do `sudo puppet apply -e 'class {alkotool:}'.
+`sudo puppet apply -v /etc/puppet/manifests/site.pp` or if you did not create the `site.pp` file you can do `sudo puppet apply -e 'class {alkotool:}`.
 
 #### Test it out
 You should now be able to access the demo application via your browser by navigating to http://localhost/.
