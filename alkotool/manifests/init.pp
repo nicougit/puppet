@@ -61,7 +61,7 @@ class alkotool {
 	exec { 'alkodeploy':
 		path => "/bin/:/usr/bin/:/sbin/:/usr/sbin/",
 		command => "wget https://nicou.me/alkotool.war -P /var/lib/tomcat8/webapps/",
-		creates => "/var/lib/tomcat8/webapps/alktool.war",
+		creates => "/var/lib/tomcat8/webapps/alkotool.war",
 		require => Service['tomcat8'],
 	}
 
