@@ -144,11 +144,7 @@
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs"
                prefix="localhost_access_log" suffix=".txt"
                pattern="%h %l %u %t &quot;%r&quot; %s %b" />
-
       </Host>
-	<Host name="myy.nicou.me" appBase="myybrowser" unpackWARs="true" autoDeploy="true">
-		<Alias>myy.nicou.me</Alias>
-	</Host>
     </Engine>
   </Service>
 </Server>
