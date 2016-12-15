@@ -1,0 +1,25 @@
+# File maintained with Puppet
+# All changes will be overwritten
+
+server {
+	listen 80 default_server;
+	listen [::]:80 default_server;
+
+	root /var/www/html;
+
+	index index.html index.htm;
+
+	server_name _;
+
+	location / {
+		return 404;
+	}
+
+	location /passi {
+		proxy_pass http://localhost:8080/passi;
+	}
+
+	location /passi-rest {
+		proxy_pass http://localhost:8080/passi-rest;
+	}
+}
